@@ -30,15 +30,63 @@
   </style>
 </head>
 <body>
-  <h1 id="title" align="center">2016 CSA Best Singer Score Board</h1>
+  <h1 id="title" align="center">2019 CSA Best Singer Score Board</h1>
   <div class="container">
   <script>
     function generateSingerBlock() {
+      var nameList = [{
+        name: 'abc',
+        score: 50
+      }, {
+        name: 'def',
+        score: 60
+      }, {
+        name: 'tyf',
+        score: 80
+      }, {
+        name: 'rfv',
+        score: 90
+      }, {
+        name: 'rfv',
+        score: 90
+      }, {
+        name: 'rfv',
+        score: 90
+      }, {
+        name: 'rfv',
+        score: 90
+      }, {
+        name: 'rfv',
+        score: 90
+      }, {
+        name: 'rfv',
+        score: 90
+      }, {
+        name: 'rfv',
+        score: 90
+      }, {
+        name: 'rfv',
+        score: 90
+      }, {
+        name: 'rfv',
+        score: 90
+      }, {
+        name: 'rfv',
+        score: 90
+      }, {
+        name: 'rfv',
+        score: 90
+      }];
+
+      nameList.sort((a, b) => b.score - a.score)
       var singerBlocks = "";
       var block = "<div class=\"singer\"><img src=\"img/temp.png\" width=\"250\"/><h2>Name: </h2><h2>Score: </h2></div>";
 
-      for (var i = 0; i < 25; i++) {
-        singerBlocks += block;
+      // for (var i = 0; i < 14; i++) {
+      //   singerBlocks += block;
+      // }
+      for(let i = 0; i < nameList.length; i++) {
+        singerBlocks += `<div class=\"singer\"><img src=\"img/${nameList[i].name}.png\" width=\"130\"/><h2>Name: ${nameList[i].name}</h2><h2>Score: ${nameList[i].score}</h2></div>`;
       }
 
       document.write(singerBlocks);
